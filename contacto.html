@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="Imagenes/Handee - Foto de perfil - 1080x1080 px.jpg">
+<title>Contacto</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .contact-container {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 40px;
+        width: 420px;
+        border-radius: 18px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        animation: fadeIn 0.7s ease-in-out;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    p {
+        text-align: center;
+        margin-bottom: 25px;
+        opacity: 0.8;
+    }
+
+    label {
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 14px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+        font-size: 15px;
+        transition: 0.3s ease-in-out;
+    }
+
+    input:focus, textarea:focus {
+        background: rgba(255, 255, 255, 0.25);
+        transform: scale(1.03);
+    }
+
+    textarea {
+        resize: none;
+        height: 120px;
+    }
+
+    .btn {
+        background: #4c6fff;
+        border: none;
+        padding: 14px;
+        width: 100%;
+        border-radius: 12px;
+        color: #fff;
+        font-size: 17px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        font-weight: 600;
+        letter-spacing: .5px;
+    }
+
+    .btn:hover {
+        background: #6f8bff;
+        transform: scale(1.04);
+    }
+
+    .social {
+        margin-top: 25px;
+        text-align: center;
+        opacity: .9;
+    }
+
+    .social a {
+        color: #fff;
+        margin: 0 10px;
+        font-size: 22px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .social a:hover {
+        color: #6f8bff;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="contact-container">
+    <h2>Contacto</h2>
+    <p>Completa el formulario para comunicarte con nosotros.</p>
+
+    <form>
+        <label>Nombre completo</label>
+        <input type="text" placeholder="Escribe tu nombre" required>
+
+        <label>Correo electrónico</label>
+        <input type="email" placeholder="email@ejemplo.com" required>
+
+        <label>Mensaje</label>
+        <textarea placeholder="Escribe tu mensaje..." required></textarea>
+
+        <button class="btn">Enviar mensaje</button>
+    </form>
+
+    <div class="social">
+        <p>También puedes escribirnos en:</p>
+        <a href="#">📧</a>
+        <a href="#">📱</a>
+        <a href="#">💬</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="Imagenes/HANDEE - LOGO HORIZONTAL - F-C.png">
+  <title>Sobre la Empresa HANDEE</title>
+  <style>
+    :root{
+      --accent: #2b6cb0;
+      --muted: #6b7280;
+      --card: #f8fafc;
+    }
+    *{box-sizing: border-box}
+    html,body{height:100%;margin:0;font-family:Inter, sans-serif;}
+    body{background:linear-gradient(180deg,#f7fbff 0%, #ffffff 100%);color:#111}
+
+    /* NAV */
+    .nav{
+      position:fixed;top:0;left:0;right:0;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 24px;
+      background:rgba(255,255,255,0.8);
+      backdrop-filter:blur(6px);
+      box-shadow:0 6px 18px rgba(0,0,0,0.07);
+      z-index:100;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand img{width:40px;height:40px;border-radius:8px;object-fit:cover}
+    .menu{display:flex;gap:18px}
+    .menu a{color:var(--muted);text-decoration:none;font-weight:600}
+    .menu a.cta{
+      background:var(--accent);color:#fff;
+      padding:8px 12px;border-radius:8px;
+    }
+
+    main{padding-top:90px;max-width:1100px;margin:0 auto}
+
+    /* SOBRE */
+    .sobre{
+      display:grid;grid-template-columns:1fr 420px;
+      gap:36px;align-items:center;
+      padding:48px 20px;
+    }
+    .sobre .texto h1{font-size:28px;margin:0 0 10px}
+    .sobre .texto p{margin:0 0 18px;color:var(--muted);line-height:1.6}
+    .sobre .texto .btns{display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn.primary{background:var(--accent);color:#fff}
+    .btn.ghost{border:1px solid #d4d4d4;color:var(--muted)}
+
+    .sobre .imagen{
+      background:#fff;padding:12px;border-radius:14px;
+      display:flex;justify-content:center;align-items:center;
+    }
+    .sobre .imagen img{
+      width:100%;height:100%;max-height:360px;object-fit:cover;border-radius:10px;
+      animation:floaty 6s ease-in-out infinite;
+    }
+
+    /* CARDS */
+    .cards{
+      display:grid;grid-template-columns:repeat(3,1fr);
+      gap:18px;padding:24px 20px;
+    }
+    .card{
+      background:var(--card);
+      padding:20px;border-radius:12px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.04);
+      min-height:120px;
+    }
+    .card h3{margin:0 0 8px}
+    .card p{margin:0;color:var(--muted);line-height:1.5}
+
+    /* Responsive */
+    @media(max-width:980px){
+      .sobre{grid-template-columns:1fr;}
+      .cards{grid-template-columns:1fr;}
+    }
+
+    /* Scroll animation */
+    .reveal{
+      opacity:0;transform:translateY(30px);
+      transition:all 0.7s ease;
+    }
+    .reveal.visible{
+      opacity:1;transform:translateY(0);
+    }
+
+    @keyframes floaty{
+      0%{transform:translateY(0)}
+      50%{transform:translateY(-8px)}
+      100%{transform:translateY(0)}
+    }
+
+    footer{
+      padding:36px 20px;text-align:center;color:var(--muted);font-size:14px;
+    }
+
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">
+      <img src="Imagenes/Handee - Foto de perfil - 1080x1080 px.jpg" alt="logo">
+      <span>Nombre Empresa</span>
+    </div>
+    <div class="menu">
+      <a href="inicio.html">Inicio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contacto" class="cta">Contacto</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="inicio"></section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre">
+      <div class="texto reveal">
+        <h1>Sobre Nosotros</h1>
+        <p>Somos una empresa comprometida con la excelencia, enfocada en ofrecer soluciones innovadoras y confiables para nuestros clientes.</p>
+        <div class="btns">
+          <a class="btn primary" href="#contacto">Contáctanos</a>
+          <a class="btn ghost">Conócenos</a>
+        </div>
+      </div>
+
+      <div class="imagen reveal">
+        <img src="Imagenes/Handee - Foto de perfil - 1080x1080 px.jpg" alt="Empresa">
+      </div>
+    </section>
+
+    <!-- VISION/MISION/VALORES -->
+    <section class="cards">
+      <article class="card reveal">
+        <h3>Visión</h3>
+        <p>Ser líderes en innovación y sostenibilidad en nuestro sector para el año 2030.</p>
+      </article>
+
+      <article class="card reveal">
+        <h3>Misión</h3>
+        <p>Proveer soluciones integrales que aporten valor real y resultados medibles.</p>
+      </article>
+
+      <article class="card reveal">
+        <h3>Valores</h3>
+        <p>Compromiso, integridad, innovación, trabajo en equipo y responsabilidad.</p>
+      </article>
+    </section>
+
+    <section style="padding:30px 20px;">
+      <div class="reveal">
+        <h2>¿Por qué elegirnos?</h2>
+        <p style="color:var(--muted)">Ofrecemos acompañamiento completo, calidad y un enfoque en resultados reales.</p>
+      </div>
+    </section>
+
+    <section id="contacto" style="padding:40px 20px;">
+      <div class="card" style="max-width:700px;margin:0 auto">
+        <h3>Contacto</h3>
+        <p style="color:var(--muted)">Email: contacto@empresa.com · Tel: +1 555 123 4567</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> HANDEE — Todos los derechos reservados
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold:0.12});
+    reveals.forEach(r=>io.observe(r));
+  </script>
+</body>
+</html>
